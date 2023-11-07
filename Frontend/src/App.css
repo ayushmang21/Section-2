@@ -1,0 +1,5 @@
+.nav-item .active{
+    border-bottom: 3px solid blueviolet;
+    color: blueviolet !important;
+    font-weight: bold;
+}
