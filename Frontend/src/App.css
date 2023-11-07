@@ -1,5 +1,9 @@
+.nav-item{
+    color: white !important;
+}
+
 .nav-item .active{
-    border-bottom: 3px solid blueviolet;
-    color: blueviolet !important;
+    color: white !important;
+    border-bottom: 3px solid white;
     font-weight: bold;
 }

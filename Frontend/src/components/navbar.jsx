@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav style={{fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#5627CC', color: 'white'}} className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <NavLink className="navbar-brand" to="/">
-                    Navbar
+                <NavLink style={{ color: 'white' }} className="navbar-brand p-2" to="/">
+                    Voilet.io
                 </NavLink>
                 <button
                     className="navbar-toggler"
@@ -19,8 +19,8 @@ const Navbar = () => {
                 >
                     <span className="navbar-toggler-icon" />
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <div  className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul style={{color: 'white'}} className="navbar-nav me-auto mb-2 mb-lg-0 p-1">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">
                                 Home
@@ -58,7 +58,7 @@ const Navbar = () => {
                             type="search"
                             placeholder="Search"
                         />
-                        <button className="btn btn-outline-dark" type="submit">
+                        <button style={{fontWeight: 500, backgroundColor: 'white'}} className="btn btn-outline-dark" type="submit">
                             Search
                         </button>
                     </form>
