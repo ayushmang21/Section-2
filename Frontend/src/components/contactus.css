@@ -1,7 +1,12 @@
-.b {
+* {
+    box-sizing: border-box;
+  }
+
+.b{
     text-align: center;
-    /* background-image: url(https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg); */
-    height: 100%;
+    background-color: blueviolet;
+    /* background-image: url(https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg); */
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,6 +19,15 @@ p{
 
 .head{
     font-size: 45px;
-    /* margin-top: 10px; */
-
 }
+
+.cont{
+    box-sizing: border-box;
+    position: absolute;
+    /* left: 38%; */
+    margin: 20px;
+    /* max-width: 300px; */
+    padding: 16px;
+    background-color: rgb(150, 107, 107);
+}
+

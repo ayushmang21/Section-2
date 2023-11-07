@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav style={{fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#5627CC', color: 'white'}} className="navbar navbar-expand-lg">
+        <nav style={{fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#5627CC', color: 'white'}} className="navbar navbar-expand-lg navbar-dark-mode">
             <div className="container-fluid">
                 <NavLink style={{ color: 'white' }} className="navbar-brand p-2" to="/">
                     Voilet.io
