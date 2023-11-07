@@ -12,7 +12,6 @@ const App = () => {
     <>
 
       <div>
-        
         <BrowserRouter>
             <Routes>
 
