@@ -1,33 +1,82 @@
-* {
-    box-sizing: border-box;
-  }
-
 .b{
-    text-align: center;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     /* background-image: url(https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg); */
-    height: 100vh;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    /* position: relative; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-p{
-    margin: 0px;
-}
-
-.head{
-    font-size: 45px;
-}
-
-.cont{
+.myform{
+    width: 30%;
     box-sizing: border-box;
-    position: absolute;
-    /* left: 38%; */
-    margin: 20px;
-    /* max-width: 300px; */
-    padding: 16px;
-    background-color: rgb(150, 107, 107);
+    padding: 40px 40px;
+    border: 2px solid rgb(71, 71, 71);
+    background-color: rgba(255, 255, 255, 0.664);
+    border-radius: 15px;
 }
 
+.form-title{
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+.myinput{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: left;
+    border-style: solid;
+    margin-top: 10px;
+    font-family: Quicksand;
+}
+
+.mybtn{
+    margin-top: 40px;
+    width: 50%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    border-style: hidden;
+    margin-bottom: 0px;
+    transition-duration: 0.8s;
+}
+
+.btnhov:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+}
+
+.help{
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    font-family: Quicksand;
+}
+
+label{
+    font-weight: 700
+}
