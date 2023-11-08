@@ -1,9 +1,21 @@
-.nav-item{
+/* .nav-item{
     color: white !important;
-}
+} */
 
 .nav-item .active{
     color: white !important;
     border-bottom: 3px solid white;
     font-weight: bold;
+}
+
+.searchbtn {
+    color: white;
+    border: none;
+    outline: white solid 1px;
+}
+.searchbtn:hover {
+    color: black;
+    /* background-color: #5627CC; */
+    background-color: #ffffff;
+    border: none;
 }
