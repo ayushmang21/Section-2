@@ -25,7 +25,8 @@ const ToDoApp = () => {
                         <input type="text" onKeyDown={addTask} className='form-control' placeholder='Enter Task Here and Press Enter ↵'/>
                     </div>
                     <div className='card-body'>
-                        { todolist.map( (task) => {return <h1>{task}</h1>} ) }
+                        { todolist.map( (task) => {return <div className='d-flex justify-content-between p-3 fw-bold display-5'> <p>{task}</p> 
+                        <button className='btn btn-danger'>Delete</button> </div>} ) }
                     </div>
                 </div>
             </div>

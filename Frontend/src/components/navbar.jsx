@@ -61,6 +61,11 @@ const Navbar = () => {
                                 To Do List
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/post">
+                                Post
+                            </NavLink>
+                        </li>
                     </ul>
                     <form className="d-flex" role="search">
                         <input
