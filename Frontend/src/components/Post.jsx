@@ -48,11 +48,13 @@ const Post = () => {
             {/* foot */}
                 <div className='card-footer border-dark-subtle'>
                     <div className='my-2'>
-                        <button className='btn btn-danger fs-5' onClick={ () => {setLikes(Likes+1);}} >❤</button>
-                        <p className='my-3'>Liked by Lorem and {Likes} others</p>
+                        <button className='btn p-0 text-danger border-0 fs-3 mx-1' onClick={ () => {setLikes(Likes+1);}} >❤</button>
+                        <p className='my-1'>Liked by Lorem and {Likes} others</p>
 
-                        <input type="text" onKeyDown={addCmt} className='form-control my-3' placeholder='Add a comment...'/>
-                        {Cmmt.map((cmt) => {return <div className='d-flex justify-content-between align-items-center mt-2   '> <p>{cmt}</p> </div>})}
+                        <input type="text" onKeyDown={addCmt} className='form-control my-3 border-dark-subtle' placeholder='Add a comment...'/>
+                        {Cmmt.map((cmt) => {return <div className='d-flex justify-content-between align-items-center ms-2'> <p>{cmt}</p> 
+                            <button className='btn border-0 text-danger d-flex justify-content-between align-items-center'>❤</button>
+                        </div>})}
                     </div>
                 </div>
 
