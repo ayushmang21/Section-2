@@ -2,7 +2,20 @@ import React, { useState } from 'react'
 
 const Post = () => {
 
-    const [Likes, setLikes] = useState(0)
+    const [Likes, setLikes] = useState(0);
+
+    const [Cmmt, setCmmt] = useState([]);
+
+    const addCmt = (e) => {
+        if(e.code =='Enter'){
+            console.log(e.target.value);
+
+            setCmmt([e.target.value , ...Cmmt ]);
+            console.log([e.target.value , ...Cmmt ]);
+
+            e.target.value ="";
+        }
+    }
 
   return (
     <div style={{fontFamily: 'Montserrat'}}>
@@ -36,7 +49,10 @@ const Post = () => {
                 <div className='card-footer border-dark-subtle'>
                     <div className='my-2'>
                         <button className='btn btn-danger fs-5' onClick={ () => {setLikes(Likes+1);}} >❤</button>
-                        <p className='mt-2'>Liked by Lorem and {Likes} others</p>
+                        <p className='my-3'>Liked by Lorem and {Likes} others</p>
+
+                        <input type="text" onKeyDown={addCmt} className='form-control my-3' placeholder='Add a comment...'/>
+                        {Cmmt.map((cmt) => {return <div className='d-flex justify-content-between align-items-center mt-2   '> <p>{cmt}</p> </div>})}
                     </div>
                 </div>
 
