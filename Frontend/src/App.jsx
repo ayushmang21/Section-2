@@ -12,6 +12,7 @@ import StateManagement from './components/StateManagement';
 import ToDoApp from './components/ToDoApp';
 import Post from './components/post';
 import NotFound from './components/NotFound';
+import Chat from './components/Chat';
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
               <Route path='/state' element={<StateManagement />} />
               <Route path='/todo' element={<ToDoApp />} />
               <Route path='/post' element={<Post />} />
+              <Route path='/chat' element={<Chat />} />
               <Route path='*' element={<NotFound />} />
 
             </Routes>
