@@ -17,8 +17,8 @@ const Chat = () => {
                 </div>
 {/* Footer */}
                 <div class="card-footer bg-success d-flex justify-content- align-items-center">
-                    <h5>😊</h5>
-                    <input type="text" placeholder='Message' className='rounded-pill p-2 ps-3 border-0'/>
+                    <i class="bi bi-emoji-smile"></i>
+                    <input type="text" placeholder='Message' className='rounded-pill p-2 ps-3 border-0 w-100'/>
                 </div>
 
             </div>
