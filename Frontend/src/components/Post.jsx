@@ -7,7 +7,8 @@ const Post = () => {
     const [Cmmt, setCmmt] = useState([]);
 
     const addCmt = (e) => {
-        if(e.code =='Enter'){
+        if(e.code =='Enter')
+        {
             console.log(e.target.value);
 
             setCmmt([e.target.value , ...Cmmt ]);
