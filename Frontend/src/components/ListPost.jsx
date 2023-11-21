@@ -39,7 +39,7 @@ const ListPost = () => {
                     <div className='card-footer'>
                         <div className='row'>
                             <div className='col-4'>
-                                <button className='btn btn-outline-dark w-100 rounded-pill' > <i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
+                                <button className='btn btn-outline-dark w-100 rounded-pill' onClick={() => addLike(index)}> <i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
                             </div>
                             <div className='col-4'>
                                 <button className='btn btn-outline-dark w-100 rounded-pill'> <i class="bi bi-chat-fill"></i> Comment</button>
