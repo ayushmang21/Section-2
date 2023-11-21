@@ -71,6 +71,11 @@ const Navbar = () => {
                                 Chat
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/listpost">
+                                List-Post
+                            </NavLink>
+                        </li>
                     </ul>
                     <form className="d-flex" role="search">
                         <input

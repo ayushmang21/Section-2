@@ -13,6 +13,7 @@ import ToDoApp from './components/ToDoApp';
 import Post from './components/post';
 import NotFound from './components/NotFound';
 import Chat from './components/Chat';
+import ListPost from './components/ListPost';
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
               <Route path='/todo' element={<ToDoApp />} />
               <Route path='/post' element={<Post />} />
               <Route path='/chat' element={<Chat />} />
+              <Route path='/listpost' element={<ListPost />} />
               <Route path='*' element={<NotFound />} />
 
             </Routes>
