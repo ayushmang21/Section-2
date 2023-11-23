@@ -15,6 +15,7 @@ import NotFound from './components/NotFound';
 import Chat from './components/Chat';
 import ListPost from './components/ListPost';
 import { Toaster } from 'react-hot-toast';
+import CreatePost from './components/CreatePost';
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
               <Route path='/post' element={<Post />} />
               <Route path='/chat' element={<Chat />} />
               <Route path='/listpost' element={<ListPost />} />
+              <Route path='/createpost' element={<CreatePost />} />
               <Route path='*' element={<NotFound />} />
 
             </Routes>
