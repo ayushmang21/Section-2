@@ -14,13 +14,14 @@ import Post from './components/post';
 import NotFound from './components/NotFound';
 import Chat from './components/Chat';
 import ListPost from './components/ListPost';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
-    <>
 
       <div>
 
+        <Toaster position='top-center' />
         <BrowserRouter>
         <Navbar />
 
@@ -44,7 +45,6 @@ const App = () => {
         
       </div>
 
-    </>
   )
 }
 
