@@ -5,7 +5,7 @@ const Login = () => {
     <div style={{fontFamily: 'Montserrat'}}>
         <div className='container text-start mt-5'>
           <div className='row'>
-              <div className='col'>
+              <div className='col d-flex align-items-center'>
                 <div className='card display-1 border-0'>
                   <div className='card-body bg-warning'>
                       Welcome

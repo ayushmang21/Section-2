@@ -51,7 +51,7 @@ const ListPost = () => {
 
                     <div className='p-3'>
                         <span>{post.like} Likes</span>&nbsp; &middot; &nbsp;
-                        <span>{post.comment} Comments</span>&nbsp;&middot; &nbsp;
+                        <span>{Cmmt.length} Comments</span>&nbsp;&middot; &nbsp;
                         <span>{post.share} Share</span>&nbsp; 
                     </div>
 

@@ -29,7 +29,8 @@ const SignUp = () => {
       console.log(values);
       resetForm();
       toast.success('Form Submitted Successfully');
-    }
+    },
+    validationSchema: SignupSchema
   });
 
 
@@ -57,12 +58,15 @@ const SignUp = () => {
                 <form onSubmit={signupForm.handleSubmit}>
 
                   <label htmlFor="name">Name</label>
+                  <span className='text-danger ms-3'>{signupForm.touched.name && signupForm.errors.name}</span>
                   <input type="text" id='name' onChange={signupForm.handleChange} value={signupForm.values.name} className='form-control mb-4' />
 
                   <label htmlFor="email">Email Address</label>
+                  <span className='text-danger ms-3'>{signupForm.touched.email && signupForm.errors.email}</span>
                   <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-4' />
 
                   <label htmlFor="password">Password</label>
+                  <span className='text-danger ms-3'>{signupForm.touched.password && signupForm.errors.password}</span>
                   <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-4' />
 
                   <button type='submit' className='btn btn-primary w-100 my-4'>Submit</button>
