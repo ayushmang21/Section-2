@@ -55,12 +55,12 @@ const Login = () => {
                     <form onSubmit={loginForm.handleSubmit}>
 
                     <label className='mt-3 fw-normal'>Email</label>
-                    <span className='text-danger ms-3'>{signupForm.touched.email && signupForm.errors.email}</span>
-                    <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mt-2'/>
+                    <span className='text-danger ms-3'>{loginForm.touched.email && loginForm.errors.email}</span>
+                    <input type="text" id='email' onChange={loginForm.handleChange} value={loginForm.values.email} className='form-control mt-2'/>
 
                     <label className='mt-3 fw-normal'>Password</label>
-                    <span className='text-danger ms-3'>{signupForm.touched.password && signupForm.errors.password}</span>
-                    <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mt-2'/>
+                    <span className='text-danger ms-3'>{loginForm.touched.password && loginForm.errors.password}</span>
+                    <input type="password" id='password' onChange={loginForm.handleChange} value={loginForm.values.password} className='form-control mt-2'/>
 
                     <button className='btn w-100 mt-5 mb-5' style={{backgroundColor: '#5627CC', color:'white'}}>Login</button>
 
