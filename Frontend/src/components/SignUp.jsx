@@ -14,6 +14,9 @@ const SignupSchema = Yup.object().shape({
   password: Yup.string()
     .min(5,'Too Short!')
     .required('Required')
+    .matches(/[0-9]/, 'Number is Required')
+    .matches(/[a-z]/, 'LowerCase is Required')
+    .matches(/[A-Z]/, 'UpperCase is Required')
 });
 
 const SignUp = () => {
@@ -41,7 +44,7 @@ const SignUp = () => {
         <div className='row'>
           <div className='col d-flex align-items-center' style={{backgroundColor: '#5627CC', color: 'white'}}>
             <div className='card display-1 border-0 '>
-              <div className='card-body bg-warning'>
+              <div className='card-body '>
                 Welcome
                 <br />
                 Back!
