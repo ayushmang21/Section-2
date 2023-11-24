@@ -17,6 +17,9 @@ const SignupSchema = Yup.object().shape({
     .matches(/[0-9]/, 'Number is Required')
     .matches(/[a-z]/, 'LowerCase is Required')
     .matches(/[A-Z]/, 'UpperCase is Required')
+    .matches(/[^\w]/, 'UpperCase is Required'),
+    confirm: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords Must Match !')
+    .required('Required')
 });
 
 const SignUp = () => {
@@ -25,7 +28,8 @@ const SignUp = () => {
     initialValues: {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      confirm: ''
     },
     onSubmit: (values, { resetForm }) => {
       alert(JSON.stringify(values));
@@ -40,19 +44,18 @@ const SignUp = () => {
 
   return (
     <div style={{ fontFamily: 'Montserrat' }}>
-      <div className='container text-start mt-5'>
+      <div className='container text-start mt-4'>
         <div className='row'>
-          <div className='col d-flex align-items-center' style={{backgroundColor: '#5627CC', color: 'white'}}>
+          <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#5627CC', color: 'white'}}>
             <div className='card display-1 border-0 '>
               <div className='card-body '>
                 Welcome
                 <br />
-                Back!
+                Back !!
               </div>
             </div>
           </div>
           <div className='col'>
-
             <div className="card">
               <div className="card-body">
                 <h3 className='my-3 text-center'>Brand Logo</h3>
@@ -71,6 +74,10 @@ const SignUp = () => {
                   <label htmlFor="password">Password</label>
                   <span className='text-danger ms-3'>{signupForm.touched.password && signupForm.errors.password}</span>
                   <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-4' />
+
+                  <label htmlFor="confirm">Confirm Password</label>
+                  <span className='text-danger ms-3'>{signupForm.touched.confirm && signupForm.errors.confirm}</span>
+                  <input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-4' />
 
                   <button type='submit' className='btn btn-primary w-100 my-4'>Submit</button>
 
