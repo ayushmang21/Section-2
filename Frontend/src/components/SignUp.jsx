@@ -17,7 +17,7 @@ const SignupSchema = Yup.object().shape({
     .matches(/[0-9]/, 'Number is Required')
     .matches(/[a-z]/, 'LowerCase is Required')
     .matches(/[A-Z]/, 'UpperCase is Required')
-    .matches(/[^\w]/, 'UpperCase is Required'),
+    .matches(/[^\w]/, 'Special Character is Required'),
     confirm: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords Must Match !')
     .required('Required')
 });
@@ -31,10 +31,22 @@ const SignUp = () => {
       password: '',
       confirm: ''
     },
-    onSubmit: (values, { resetForm }) => {
-      alert(JSON.stringify(values));
+    onSubmit: async (values, { resetForm }) => {
+      // alert(JSON.stringify(values));
       console.log(values);
-      resetForm();
+
+      //send req to backend/Rest API
+      const response = await fetch('http://localhost:5000/user/add', {
+        method : 'POST',
+        body : JSON.stringify(values),
+        headers : {
+          'Content-Type' : 'application/json'
+        }
+      });
+
+      console.log(response.status);
+
+      // resetForm();
       toast.success('Form Submitted Successfully');
     },
     validationSchema: SignupSchema
