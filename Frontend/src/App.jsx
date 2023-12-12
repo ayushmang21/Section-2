@@ -16,12 +16,14 @@ import Chat from './components/Chat';
 import ListPost from './components/ListPost';
 import { Toaster } from 'react-hot-toast';
 import CreatePost from './components/CreatePost';
+import { SnackbarProvider } from 'notistack';
+import ManageUser from './components/ManageUser';
 
 const App = () => {
   return (
 
       <div>
-
+        <SnackbarProvider anchorOrigin={{horizontal: 'right',vertical:'top'}} maxSnack={3}>
         <Toaster position='top-center' />
         <BrowserRouter>
         <Navbar />
@@ -40,10 +42,12 @@ const App = () => {
               <Route path='/chat' element={<Chat />} />
               <Route path='/listpost' element={<ListPost />} />
               <Route path='/createpost' element={<CreatePost />} />
+              <Route path='/manage' element={<ManageUser />} />
               <Route path='*' element={<NotFound />} />
 
             </Routes>
         </BrowserRouter>
+        </SnackbarProvider>
         
       </div>
 
