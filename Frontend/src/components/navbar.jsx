@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav style={{fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#5627CC', color: 'white'}} className="navbar navbar-expand-lg navbar-dark">
+        <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#5627CC', color: 'white' }} className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <NavLink style={{ color: 'white' }} className="navbar-brand p-2" to="/">
                     Voilet.io
@@ -19,8 +19,8 @@ const Navbar = () => {
                 >
                     <span className="navbar-toggler-icon" />
                 </button>
-                <div  className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul style={{color: 'white'}} className="navbar-nav me-auto mb-2 mb-lg-0 p-1">
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul style={{ color: 'white' }} className="navbar-nav me-auto mb-2 mb-lg-0 p-1">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">
                                 Home
@@ -46,16 +46,7 @@ const Navbar = () => {
                                 Contact Us
                             </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/event">
-                                Event Handling
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/state">
-                                State Management
-                            </NavLink>
-                        </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/todo">
                                 To Do List
@@ -81,11 +72,35 @@ const Navbar = () => {
                                 Create-Post
                             </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/manage">
-                                Manage User
-                            </NavLink>
+
+
+                        <li class="nav-item dropdown">
+                            <button className="btn dropbtn text-light dropdown-toggle border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-light" style={{ backgroundColor: '#5627CC', }}>
+
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/event">
+                                        Event Handling
+                                    </NavLink>
+                                </li>
+
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/state">
+                                        State Management
+                                    </NavLink>
+                                </li>
+
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/manage">
+                                        Manage User
+                                    </NavLink>
+                                </li>
+
+                            </ul>
                         </li>
+
                     </ul>
                     <form className="d-flex" role="search">
                         <input
@@ -93,7 +108,7 @@ const Navbar = () => {
                             type="search"
                             placeholder="Search"
                         />
-                        <button style={{fontWeight: 500}} className="btn searchbtn" type="submit">
+                        <button style={{ fontWeight: 500 }} className="btn searchbtn" type="submit">
                             Search
                         </button>
                     </form>
