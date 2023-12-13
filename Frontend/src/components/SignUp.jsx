@@ -76,33 +76,35 @@ const SignUp = () => {
               </div>
             </div>
           </div>
-          <div className='col'>
-            <div className="card border-0">
-              <div className="card-body">
+          <div className='col'style={{backgroundColor: '#d9c0c1'}}>
+            <div className="card border-0" style={{backgroundColor: '#d9c0c1'}}>
+              <div className="card-body" >
                 <h3 className='my-3 text-center display-5 fw-bold'>Voilet.io</h3>
-                <h5 className='text-center text-muted mb-4 mt-4'>Signup Form</h5>
+                <h5 className='text-center fs-4 mb-4 mt-3'>Signup Form</h5>
 
                 <form onSubmit={signupForm.handleSubmit}>
 
-                  <label className='fw-normal' htmlFor="name">Name</label>
+                  <label className='fw-medium' htmlFor="name">Name</label>
                   <span className='text-danger ms-3'>{signupForm.touched.name && signupForm.errors.name}</span>
-                  <input type="text" id='name' onChange={signupForm.handleChange} value={signupForm.values.name} className='form-control mb-4' />
+                  <input type="text" id='name' onChange={signupForm.handleChange} value={signupForm.values.name} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
 
-                  <label className='fw-normal' htmlFor="email">Email Address</label>
+                  <label className='fw-medium' htmlFor="email">Email Address</label>
                   <span className='text-danger ms-3'>{signupForm.touched.email && signupForm.errors.email}</span>
-                  <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-4' />
+                  <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
 
-                  <label className='fw-normal' htmlFor="password">Password</label>
+                  <label className='fw-medium' htmlFor="password">Password</label>
                   <span className='text-danger ms-3'>{signupForm.touched.password && signupForm.errors.password}</span>
-                  <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-4' />
+                  <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
 
-                  <label className='fw-normal' htmlFor="confirm">Confirm Password</label>
+                  <label className='fw-medium' htmlFor="confirm">Confirm Password</label>
                   <span className='text-danger ms-3'>{signupForm.touched.confirm && signupForm.errors.confirm}</span>
-                  <input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-4' />
+                  <input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
 
                   <button type='submit' className='btn btn-primary w-100 my-4 border-0' style={{backgroundColor: '#391b7f', color:'white'}}>Submit</button>
 
                 </form>
+
+                <p className='fw-medium'>Already a User ? <a href="Login" style={{color:'#391b7f'}}>Login</a></p>
 
               </div>
             </div>

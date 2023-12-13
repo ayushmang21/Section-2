@@ -34,8 +34,8 @@ const Login = () => {
 
   return (
     <div style={{fontFamily: 'Montserrat'}}>
-        <div className='container text-start mt-5'>
-          <div className='row'>
+        <div className='container text-start my-5' style={{height: '100vh'}}>
+          <div className='row my-5'>
               <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#391b7f',}}>
                 <div className='card display-1 border-0'>
                   <div className='card-body text-white' style={{backgroundColor: '#391b7f',}}>
@@ -45,7 +45,7 @@ const Login = () => {
                   </div>
                 </div>
               </div>
-              <div className='col'style={{backgroundColor: '#d9c0c1'}}>
+              <div className='col' style={{backgroundColor: '#d9c0c1'}}>
                 <div className='card border-0' style={{backgroundColor: '#d9c0c1'}}>
                   <div className='card-body' >
                     <h2 className='my-3 text-center display-5 fw-bold'>Login</h2>
