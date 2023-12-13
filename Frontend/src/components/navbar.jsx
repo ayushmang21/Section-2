@@ -22,26 +22,31 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul style={{ color: 'white' }} className="navbar-nav me-auto mb-2 mb-lg-0 p-1">
+                        
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">
                                 Home
                             </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/login">
-                                Login
-                            </NavLink>
-                        </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/signup">
                                 Sign Up
                             </NavLink>
                         </li>
+
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/login">
+                                Login
+                            </NavLink>
+                        </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/aboutus">
                                 About Us
                             </NavLink>
                         </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/contactus">
                                 Contact Us
@@ -53,21 +58,25 @@ const Navbar = () => {
                                 To Do List
                             </NavLink>
                         </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/post">
                                 Post
                             </NavLink>
                         </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/chat">
                                 Chat
                             </NavLink>
                         </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/listpost">
                                 List-Post
                             </NavLink>
                         </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/createpost">
                                 Create-Post
