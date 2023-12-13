@@ -79,8 +79,10 @@ const SignUp = () => {
           <div className='col'style={{backgroundColor: '#d9c0c1'}}>
             <div className="card border-0" style={{backgroundColor: '#d9c0c1'}}>
               <div className="card-body" >
-                <h3 className='my-3 text-center display-5 fw-bold'>Voilet.io</h3>
-                <h5 className='text-center fs-4 mb-4 mt-3'>Signup Form</h5>
+
+                <h3 className='my-3 text-center display-5 fw-bold'>Sign Up</h3>
+
+                <p className='text-center my-4 fw-medium'>New User...!! Sign Up Here.</p>
 
                 <form onSubmit={signupForm.handleSubmit}>
 
@@ -104,7 +106,7 @@ const SignUp = () => {
 
                 </form>
 
-                <p className='fw-medium'>Already a User ? <a href="Login" style={{color:'#391b7f'}}>Login</a></p>
+                <p className='fw-medium mb-5 mt-2'>Already a User ? <a href="Login" style={{color:'#391b7f'}}>Login</a></p>
 
               </div>
             </div>
