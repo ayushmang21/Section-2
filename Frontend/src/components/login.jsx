@@ -36,12 +36,12 @@ const Login = () => {
     <div style={{fontFamily: 'Montserrat'}}>
         <div className='container text-start mt-5'>
           <div className='row'>
-              <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#5627CC',}}>
+              <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#20084F',}}>
                 <div className='card display-1 border-0'>
-                  <div className='card-body text-white' style={{backgroundColor: '#5627CC', }}>
+                  <div className='card-body text-white' style={{backgroundColor: '#20084F', color: 'FDD062'}}>
                       Welcome
                       <br />
-                      Back!
+                      Back !!
                   </div>
                 </div>
               </div>
@@ -62,7 +62,7 @@ const Login = () => {
                     <span className='text-danger ms-3'>{loginForm.touched.password && loginForm.errors.password}</span>
                     <input type="password" id='password' onChange={loginForm.handleChange} value={loginForm.values.password} className='form-control mt-2'/>
 
-                    <button className='btn w-100 mt-5 mb-5' style={{backgroundColor: '#5627CC', color:'white'}}>Login</button>
+                    <button className='btn w-100 mt-5 mb-5' style={{backgroundColor: '#20084F', color:'white'}}>Login</button>
 
                     </form>
 

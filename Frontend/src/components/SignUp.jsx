@@ -67,9 +67,9 @@ const SignUp = () => {
     <div style={{ fontFamily: 'Montserrat' }}>
       <div className='container text-start mt-4'>
         <div className='row'>
-          <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#5627CC', color: 'white'}}>
+          <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#20084F', color: 'white'}}>
             <div className='card display-1 border-0 '>
-              <div className='card-body '>
+              <div className='card-body text-white' style={{backgroundColor: '#20084F', }}>
                 Welcome
                 <br />
                 Back !!
@@ -77,30 +77,30 @@ const SignUp = () => {
             </div>
           </div>
           <div className='col'>
-            <div className="card">
+            <div className="card border-0">
               <div className="card-body">
                 <h3 className='my-3 text-center'>Brand Logo</h3>
                 <h5 className='text-center text-muted'>Signup Form</h5>
 
                 <form onSubmit={signupForm.handleSubmit}>
 
-                  <label htmlFor="name">Name</label>
+                  <label className='fw-normal' htmlFor="name">Name</label>
                   <span className='text-danger ms-3'>{signupForm.touched.name && signupForm.errors.name}</span>
                   <input type="text" id='name' onChange={signupForm.handleChange} value={signupForm.values.name} className='form-control mb-4' />
 
-                  <label htmlFor="email">Email Address</label>
+                  <label className='fw-normal' htmlFor="email">Email Address</label>
                   <span className='text-danger ms-3'>{signupForm.touched.email && signupForm.errors.email}</span>
                   <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-4' />
 
-                  <label htmlFor="password">Password</label>
+                  <label className='fw-normal' htmlFor="password">Password</label>
                   <span className='text-danger ms-3'>{signupForm.touched.password && signupForm.errors.password}</span>
                   <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-4' />
 
-                  <label htmlFor="confirm">Confirm Password</label>
+                  <label className='fw-normal' htmlFor="confirm">Confirm Password</label>
                   <span className='text-danger ms-3'>{signupForm.touched.confirm && signupForm.errors.confirm}</span>
                   <input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-4' />
 
-                  <button type='submit' className='btn btn-primary w-100 my-4'>Submit</button>
+                  <button type='submit' className='btn btn-primary w-100 my-4' style={{backgroundColor: '#20084F', color:'white'}}>Submit</button>
 
                 </form>
 

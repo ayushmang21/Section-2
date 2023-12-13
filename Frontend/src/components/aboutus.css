@@ -5,18 +5,18 @@
 .title{
     font-size: 40px;
     font-weight: 600;
-    background-color: #c7c7c7;
+    background-color: #d9c0c1;
 }
 
 .sub-title{
     font-size: 30px;
     font-weight: 500;
-    background-color: #c7c7c7;
+    background-color: #d9c0c1;
 }
 
 .story{
     font-size: 18px;
-    background-color: #c7c7c7;
+    background-color: #d9c0c1;
     padding: 10px;
 }
 
@@ -26,5 +26,5 @@ p{
 
 .founder{
     height: 400px;
-    box-shadow: 0px 0px 6px 5px #c7c7c7;
+    box-shadow: 0px 0px 6px 5px #d9c0c1;
 }
