@@ -66,10 +66,10 @@ const SignUp = () => {
   return (
     <div style={{ fontFamily: 'Montserrat' }}>
       <div className='container text-start mt-4'>
-        <div className='row'>
-          <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#20084F', color: 'white'}}>
+        <div className='row' >
+          <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#391b7f', color: 'white'}}>
             <div className='card display-1 border-0 '>
-              <div className='card-body text-white' style={{backgroundColor: '#20084F', }}>
+              <div className='card-body text-white' style={{backgroundColor: '#391b7f', }}>
                 Welcome
                 <br />
                 Back !!
@@ -79,8 +79,8 @@ const SignUp = () => {
           <div className='col'>
             <div className="card border-0">
               <div className="card-body">
-                <h3 className='my-3 text-center'>Brand Logo</h3>
-                <h5 className='text-center text-muted'>Signup Form</h5>
+                <h3 className='my-3 text-center display-5 fw-bold'>Voilet.io</h3>
+                <h5 className='text-center text-muted mb-4 mt-4'>Signup Form</h5>
 
                 <form onSubmit={signupForm.handleSubmit}>
 
@@ -100,7 +100,7 @@ const SignUp = () => {
                   <span className='text-danger ms-3'>{signupForm.touched.confirm && signupForm.errors.confirm}</span>
                   <input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-4' />
 
-                  <button type='submit' className='btn btn-primary w-100 my-4' style={{backgroundColor: '#20084F', color:'white'}}>Submit</button>
+                  <button type='submit' className='btn btn-primary w-100 my-4 border-0' style={{backgroundColor: '#391b7f', color:'white'}}>Submit</button>
 
                 </form>
 
