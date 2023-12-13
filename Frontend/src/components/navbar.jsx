@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#5627CC', color: 'white' }} 
+        <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#391b7f', color: 'white' }} 
              className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <NavLink style={{ color: 'white' }} className="navbar-brand p-2" to="/">
@@ -76,10 +76,8 @@ const Navbar = () => {
 
 
                         <li className="nav-item dropdown dropdown-center">
-                            <a className="btn dropbtn text-light dropdown-toggle border-0 fw-semibold mt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                
-                            </a>
-                            <ul className="dropdown-menu dropdown-menu-light text-center" style={{ backgroundColor: '#5627CC', }}>
+                            <a className="btn  text-light dropdown-toggle border-0 fw-semibold mt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul className="dropdown-menu dropdown-menu-light text-start ps-1" style={{ backgroundColor: '#391b7f', }}>
 
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/event">
@@ -105,7 +103,7 @@ const Navbar = () => {
                     </ul>
                     <form className="d-flex" role="search">
                         <input
-                            className="form-control me-2"
+                            className="form-control me-2 focus-ring focus-ring-light"
                             type="search"
                             placeholder="Search"
                         />
