@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#5627CC', color: 'white' }} className="navbar navbar-expand-lg navbar-dark">
+        <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#5627CC', color: 'white' }} 
+             className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <NavLink style={{ color: 'white' }} className="navbar-brand p-2" to="/">
                     Voilet.io
@@ -74,11 +75,11 @@ const Navbar = () => {
                         </li>
 
 
-                        <li class="nav-item dropdown">
-                            <button className="btn dropbtn text-light dropdown-toggle border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li className="nav-item dropdown dropdown-center">
+                            <a className="btn dropbtn text-light dropdown-toggle border-0 fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-light" style={{ backgroundColor: '#5627CC', }}>
+                            </a>
+                            <ul className="dropdown-menu dropdown-menu-light text-center" style={{ backgroundColor: '#5627CC', }}>
 
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/event">
