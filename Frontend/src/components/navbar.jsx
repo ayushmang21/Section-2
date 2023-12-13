@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#391b7f', color: 'white' }} 
              className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
-                <NavLink style={{ color: 'white' }} className="navbar-brand p-2" to="/">
+                <NavLink style={{ color: 'white', fontFamily: 'monospace', }} className="navbar-brand p-2" to="/">
                     Voilet.io
                 </NavLink>
                 <button
