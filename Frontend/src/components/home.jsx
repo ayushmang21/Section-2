@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div style={{ fontFamily: 'Montserrat' }}>
 
-      <div>
+      <div style={{backgroundColor:'#D9C0C1'}} className='py-1'>
         <h1 className='my-4 text-center' style={{ fontSize: 70, }}>Welcome to&#160;
           <span style={{ color: '#391b7f', fontFamily: 'monospace', textDecoration: 'underline' }}>
             Voilet.io
@@ -18,7 +18,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className='mt-5'>
+      <div className='mt-5 py-2' style={{backgroundColor:'#D9C0C1'}}>
         <p className='fs-3 fw-medium text-center'>
           Are you a First-Timer...?&#160;
           <span>
