@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ManageUser = () => {
+
+  const [userArray, setUserArray] = useState([]);
 
     const getUserData = async () => {
 
@@ -10,14 +12,57 @@ const ManageUser = () => {
         const data = await res.json();
         console.table(data);
 
+        setUserArray(data);
+
     }
 
     useEffect(() => {
         getUserData();
-    }, [])
+    }, []);
+
+    const deleteUser = (id) => {
+      console.log(id);
+    }
+
+    const displayUserData = () => {
+      if (userArray.length){
+        return userArray.map((user) => {
+          return <tr>
+            <td>{user._id}</td>
+            <td>{user.name}</td>
+            <td>{user.email}</td>
+            <td>{user.location}</td>
+            <td>{user.password}</td>
+            <td>
+              <button onClick={ () => {deleteUser(user._id)}} className='btn btn-danger'>Delete</button>
+            </td>
+          </tr>
+        })
+      }
+    }
 
   return (
-    <div>ManageUser</div>
+    <div>
+      <div className='container'>
+        <h1 className='text-center'>Manage User Data</h1>
+        <hr />
+
+        <table className='table table-dark'>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Location</th>
+              <th>Password</th>
+            </tr>
+          </thead>
+          <tbody>
+            {displayUserData()}
+          </tbody>
+        </table>
+      </div>
+    </div>
   )
 }
 
