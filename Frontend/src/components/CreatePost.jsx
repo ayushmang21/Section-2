@@ -15,7 +15,7 @@ const CreatePost = () => {
                             <label htmlFor="photo" className='my-3 fs-3'>Image</label>
                             <input className='form-control border-2 border-dark' type="text" />
 
-                            <button className='btn w-75 mt-5' style={{ backgroundColor: '#5627CC', color: 'white' }}>Create</button>
+                            <button className='btn w-100 mt-5' style={{ backgroundColor: '#5627CC', color: 'white' }}>Create</button>
 
                         </div>
                     </div>

@@ -18,6 +18,7 @@ import { Toaster } from 'react-hot-toast';
 import CreatePost from './components/CreatePost';
 import { SnackbarProvider } from 'notistack';
 import ManageUser from './components/ManageUser';
+import UpdateUser from './components/UpdateUser';
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
               <Route path='/listpost' element={<ListPost />} />
               <Route path='/createpost' element={<CreatePost />} />
               <Route path='/manage' element={<ManageUser />} />
+              <Route path='/update/:id' element={<UpdateUser />} />
               <Route path='*' element={<NotFound />} />
 
             </Routes>
