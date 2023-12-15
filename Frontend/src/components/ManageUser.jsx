@@ -44,10 +44,10 @@ const ManageUser = () => {
             <td>{user.location}</td>
             <td>{user.password}</td>
             <td>
-              <button onClick={ () => {deleteUser(user._id)}} className='btn btn-success'>Update</button>
+              <button onClick={ () => {deleteUser(user._id)}} className='btn btn-danger'>Delete</button>
             </td>
             <td>
-              <Link to={'/update/'+user._id} className='btn btn-danger'> Delete </Link>
+              <Link to={'/update/'+user._id} className='btn btn-success'> Update </Link>
             </td>
           </tr>
         })
