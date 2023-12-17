@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#391b7f', color: 'white' }} 
-             className="navbar navbar-expand-lg navbar-dark">
+        <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#391b7f', color: 'white' }}
+            className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <NavLink style={{ color: 'white', fontFamily: 'monospace', }} className="navbar-brand p-2" to="/">
                     Voilet.io
@@ -22,7 +22,7 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul style={{ color: 'white' }} className="navbar-nav me-auto mb-2 mb-lg-0 p-1">
-                        
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">
                                 Home
@@ -65,11 +65,6 @@ const Navbar = () => {
                             </NavLink>
                         </li>
 
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/chat">
-                                Chat
-                            </NavLink>
-                        </li>
 
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/listpost">
@@ -89,6 +84,12 @@ const Navbar = () => {
                             <ul className="dropdown-menu dropdown-menu-light text-start ps-1" style={{ backgroundColor: '#391b7f', }}>
 
                                 <li className="nav-item">
+                                    <NavLink className="nav-link" to="/chat">
+                                        Chat
+                                    </NavLink>
+                                </li>
+
+                                <li className="nav-item">
                                     <NavLink className="nav-link" to="/event">
                                         Event Handling
                                     </NavLink>
@@ -106,7 +107,7 @@ const Navbar = () => {
                                     </NavLink>
                                 </li>
 
-                                
+
 
                             </ul>
                         </li>

@@ -82,7 +82,7 @@ const SignUp = () => {
 
                 <h3 className='my-3 text-center display-5 fw-bold'>Sign Up</h3>
 
-                <p className='text-center my-4 fw-medium'>New User...? <br /> Sign Up Here.</p>
+                <p className='text-center my-4 fw-medium'>New User...? <br /> Please Sign Up Here.</p>
 
                 <form onSubmit={signupForm.handleSubmit}>
 
