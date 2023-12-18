@@ -78,6 +78,12 @@ const Navbar = () => {
                             </NavLink>
                         </li>
 
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/manage">
+                                Manage User
+                            </NavLink>
+                        </li>
+
 
                         <li className="nav-item dropdown dropdown-center">
                             <a className="btn  text-light dropdown-toggle border-0 fw-semibold mt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
@@ -101,11 +107,7 @@ const Navbar = () => {
                                     </NavLink>
                                 </li>
 
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/manage">
-                                        Manage User
-                                    </NavLink>
-                                </li>
+
 
 
 
