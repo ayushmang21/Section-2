@@ -1,4 +1,6 @@
 import React from 'react'
+// import MySvg from "/Users/Dell/Downloads/undraw_blooming_re_2kc4.svg";
+import pic from '../assets';
 
 const Home = () => {
   return (
@@ -16,6 +18,10 @@ const Home = () => {
         <p className='fs-3 fw-medium text-center' style={{}}>
           Your All-In-One Experience
         </p>
+      </div>
+
+      <div>
+        <img src="pic" alt="" />
       </div>
 
       <div className='mt-5 mb-4 py-2' style={{ backgrounColor: '#D9C0C1' }}>
