@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const [currentUser, setCurrentUser] = useState(
+        JSON.parse(sessionStorage.getItem('user'))
+    );
+
+
+
     return (
         <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#391b7f', color: 'white' }}
             className="navbar navbar-expand-lg navbar-dark">
@@ -26,18 +33,6 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">
                                 Home
-                            </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/signup">
-                                Sign Up
-                            </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/login">
-                                Login
                             </NavLink>
                         </li>
 
@@ -106,14 +101,32 @@ const Navbar = () => {
                                         State Management
                                     </NavLink>
                                 </li>
-
-
-
-
-
                             </ul>
                         </li>
 
+                    </ul>
+
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0 p-1">
+                        {
+                            currentUser !== null ? (
+                                <button className='btn btn-danger'>Logout</button>
+                            ) :
+                                (
+                                    <>
+                                        <li className="nav-item">
+                                            <NavLink className="nav-link" to="/signup">
+                                                Sign Up
+                                            </NavLink>
+                                        </li>
+
+                                        <li className="nav-item">
+                                            <NavLink className="nav-link" to="/login">
+                                                Login
+                                            </NavLink>
+                                        </li>
+                                    </>
+                                )
+                        }
                     </ul>
                     <form className="d-flex" role="search">
                         <input
@@ -122,7 +135,8 @@ const Navbar = () => {
                             placeholder="Search"
                         />
                         <button style={{ fontWeight: 500 }} className="btn searchbtn" type="submit">
-                            Search
+                            {/* Search */}
+                            <i class="bi bi-search"></i>
                         </button>
                     </form>
                 </div>

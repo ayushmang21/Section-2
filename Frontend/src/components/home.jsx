@@ -1,6 +1,5 @@
 import React from 'react'
-// import MySvg from "/Users/Dell/Downloads/undraw_blooming_re_2kc4.svg";
-import pic from '../assets';
+import pic from '../assets/undraw_blooming.svg';
 
 const Home = () => {
   return (

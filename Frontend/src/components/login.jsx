@@ -1,14 +1,12 @@
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 // import toast from 'react-hot-toast';
 import * as Yup from 'yup';
+import SignUp from './SignUp';
 
 const LoginSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
   email: Yup.string()
     .email('Invalid email')
     .required('Required'),
@@ -19,11 +17,11 @@ const LoginSchema = Yup.object().shape({
     .matches(/[a-z]/, 'LowerCase is Required')
     .matches(/[A-Z]/, 'UpperCase is Required')
     .matches(/[^\w]/, 'Special Character is Required'),
-    confirm: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords Must Match !')
-    .required('Required')
 });
 
 const Login = () => {
+
+  const navigate = useNavigate();
 
   const loginForm = useFormik({
     initialValues: {
@@ -48,6 +46,14 @@ const Login = () => {
 
       if (response.status === 200) {
         enqueueSnackbar('LoggedIn Successfully', {variant: 'success'});
+
+        const data = await response.json();
+        console.log(data);
+
+        // to save user data in session
+        sessionStorage.setItem('user', JSON.stringify(data));
+
+        navigate('/manage');
       }
       else if(response.status === 401){
         enqueueSnackbar('Email or Password is Incorrect', {variant: 'error'});
@@ -97,7 +103,8 @@ const Login = () => {
 
                 </form>
 
-                <p className='fw-medium mb-5 mt-2'>Already a User ? <a href="Login" style={{color:'#391b7f'}}>Login</a></p>
+                {/* <p className='fw-medium mb-5 mt-2'>Already a User ? <a href="Login" style={{color:'#391b7f'}}>Login</a></p> */}
+                <p className='fw-medium mb-5 mt-2'>New User ? <Link to={'/signup'} style={{color:'#391b7f'}}>Sign Up</Link></p>
 
               </div>
             </div>
