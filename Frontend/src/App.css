@@ -22,10 +22,6 @@
 }
 
 .homepg {
-    /* background: linear-gradient(90deg, #5627CC, #9F5ECF, #9F5ECF, #5627CC ); */
-
-    /* background: repeating-radial-gradient(75% 75% at 228% 224%, #00FFFF12 30%, #073AFF14 39%),radial-gradient(99% 99% at 109% 2%, #9F5ECF 0%, #073AFF00 100%),radial-gradient(99% 99% at 2% 109%, #4214A1 0%, #073AFF00 100%),radial-gradient(160% 154% at 711px -303px, #20084F 0%, #5627CC 100%); */
-
     background: repeating-linear-gradient(315deg, #D9C0C11C 95%, #073AFF00 100%),repeating-radial-gradient(75% 75% at 228% 224%, #00FFFF12 30%, #073AFF14 39%),radial-gradient(99% 99% at 109% 2%, #9F5ECF 0%, #073AFF00 100%),radial-gradient(99% 99% at 2% 109%, #4214A1 0%, #073AFF00 100%),radial-gradient(160% 154% at 711px -303px, #20084F 0%, #5627CC 100%);
 
     /* background-size: 150% 150%; */
