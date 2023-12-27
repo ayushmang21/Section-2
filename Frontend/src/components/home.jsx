@@ -20,7 +20,7 @@ const Home = () => {
       </div>
 
       <div>
-        <img src="pic.svg" alt="" />
+        <img src="undraw_blooming.svg" alt="" />
       </div>
 
       <div className='mt-5 mb-4 py-2' style={{ backgrounColor: '#D9C0C1' }}>
