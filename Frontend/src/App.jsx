@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/home';
 import Login from './components/login';
 import SignUp from './components/SignUp';
@@ -14,7 +14,7 @@ import Post from './components/post';
 import NotFound from './components/NotFound';
 import Chat from './components/Chat';
 import ListPost from './components/ListPost';
-import { Toaster } from 'react-hot-toast';
+// import { Toaster } from 'react-hot-toast';
 import CreatePost from './components/CreatePost';
 import { SnackbarProvider } from 'notistack';
 import ManageUser from './components/ManageUser';
@@ -23,36 +23,35 @@ import UpdateUser from './components/UpdateUser';
 const App = () => {
   return (
 
-      <div>
-        <SnackbarProvider anchorOrigin={{horizontal: 'right',vertical:'top'}} maxSnack={3}>
-        <Toaster position='top-center' />
+    <div>
+      <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }} maxSnack={3}>
+        {/* <Toaster position='top-center' /> */}
         <BrowserRouter>
-        <Navbar />
+          <Navbar />
 
-            <Routes>
+          <Routes>
 
-              <Route path='/' element={<Home />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/signup' element={<SignUp />} />
-              <Route path='/aboutus' element={<AboutUs />} />
-              <Route path='/contactus' element={<ContactUs />} />
-              <Route path='/event' element={<EventHandling />} />
-              <Route path='/state' element={<StateManagement />} />
-              <Route path='/todo' element={<ToDoApp />} />
-              <Route path='/post' element={<Post />} />
-              <Route path='/chat' element={<Chat />} />
-              <Route path='/listpost' element={<ListPost />} />
-              <Route path='/createpost' element={<CreatePost />} />
-              <Route path='/manage' element={<ManageUser />} />
-              <Route path='/update/:id' element={<UpdateUser />} />
-              <Route path='*' element={<NotFound />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<SignUp />} />
+            <Route path='/aboutus' element={<AboutUs />} />
+            <Route path='/contactus' element={<ContactUs />} />
+            <Route path='/event' element={<EventHandling />} />
+            <Route path='/state' element={<StateManagement />} />
+            <Route path='/todo' element={<ToDoApp />} />
+            <Route path='/post' element={<Post />} />
+            <Route path='/chat' element={<Chat />} />
+            <Route path='/listpost' element={<ListPost />} />
+            <Route path='/createpost' element={<CreatePost />} />
+            <Route path='/manage' element={<ManageUser />} />
+            <Route path='/update/:id' element={<UpdateUser />} />
+            <Route path='*' element={<NotFound />} />
 
-            </Routes>
+          </Routes>
         </BrowserRouter>
-        </SnackbarProvider>
-        
-      </div>
+      </SnackbarProvider>
 
+    </div>
   )
 }
 
