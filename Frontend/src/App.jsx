@@ -19,35 +19,38 @@ import CreatePost from './components/CreatePost';
 import { SnackbarProvider } from 'notistack';
 import ManageUser from './components/ManageUser';
 import UpdateUser from './components/UpdateUser';
+import { AppProvider } from './AppContext';
 
 const App = () => {
   return (
 
     <div>
-      <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }} maxSnack={3}>
+      <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }} maxSnack={3} autoHideDuration={3000}>
         {/* <Toaster position='top-center' /> */}
         <BrowserRouter>
-          <Navbar />
+          <AppProvider>
+            <Navbar cartItems={10} />
 
-          <Routes>
+            <Routes>
 
-            <Route path='/' element={<Home />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<SignUp />} />
-            <Route path='/aboutus' element={<AboutUs />} />
-            <Route path='/contactus' element={<ContactUs />} />
-            <Route path='/event' element={<EventHandling />} />
-            <Route path='/state' element={<StateManagement />} />
-            <Route path='/todo' element={<ToDoApp />} />
-            <Route path='/post' element={<Post />} />
-            <Route path='/chat' element={<Chat />} />
-            <Route path='/listpost' element={<ListPost />} />
-            <Route path='/createpost' element={<CreatePost />} />
-            <Route path='/manage' element={<ManageUser />} />
-            <Route path='/update/:id' element={<UpdateUser />} />
-            <Route path='*' element={<NotFound />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/signup' element={<SignUp />} />
+              <Route path='/aboutus' element={<AboutUs />} />
+              <Route path='/contactus' element={<ContactUs />} />
+              <Route path='/event' element={<EventHandling />} />
+              <Route path='/state' element={<StateManagement />} />
+              <Route path='/todo' element={<ToDoApp />} />
+              <Route path='/post' element={<Post />} />
+              <Route path='/chat' element={<Chat />} />
+              <Route path='/listpost' element={<ListPost />} />
+              <Route path='/createpost' element={<CreatePost />} />
+              <Route path='/manage' element={<ManageUser />} />
+              <Route path='/update/:id' element={<UpdateUser />} />
+              <Route path='*' element={<NotFound />} />
 
-          </Routes>
+            </Routes>
+          </AppProvider>
         </BrowserRouter>
       </SnackbarProvider>
 

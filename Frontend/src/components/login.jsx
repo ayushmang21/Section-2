@@ -2,9 +2,10 @@ import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-// import toast from 'react-hot-toast';
 import * as Yup from 'yup';
-import SignUp from './SignUp';
+import useAppContext from '../AppContext';
+// import toast from 'react-hot-toast';
+// import SignUp from './SignUp';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
@@ -22,6 +23,8 @@ const LoginSchema = Yup.object().shape({
 const Login = () => {
 
   const navigate = useNavigate();
+
+  const {setLoggedIn} = useAppContext();
 
   const loginForm = useFormik({
     initialValues: {
@@ -52,7 +55,7 @@ const Login = () => {
 
         // to save user data in session
         sessionStorage.setItem('user', JSON.stringify(data));
-
+        setLoggedIn(true);
         navigate('/manage');
       }
       else if(response.status === 401){

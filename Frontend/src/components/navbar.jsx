@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import useAppContext from '../AppContext';
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
 
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(sessionStorage.getItem('user'))
     );
 
-
+    const {loggedIn, logout} = useAppContext();
 
     return (
         <nav style={{ fontFamily: 'Montserrat', fontWeight: 600, backgroundColor: '#391b7f', color: 'white' }}
@@ -27,6 +28,7 @@ const Navbar = () => {
                 >
                     <span className="navbar-toggler-icon" />
                 </button>
+                
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul style={{ color: 'white' }} className="navbar-nav me-auto mb-2 mb-lg-0 p-1">
 
@@ -119,8 +121,8 @@ const Navbar = () => {
 
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0 p-1">
                         {
-                            currentUser !== null ? (
-                                <button className='btn btn-danger'>Logout</button>
+                            loggedIn ? (
+                                <button className='btn btn-danger' onClick={logout} >Logout</button>
                             ) :
                                 (
                                     <>
