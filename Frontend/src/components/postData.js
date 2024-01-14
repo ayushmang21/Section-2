@@ -1,5 +1,3 @@
-import ListPost from "./ListPost"
-
 const postData = [
     {
     author : "Raju Rastogi",

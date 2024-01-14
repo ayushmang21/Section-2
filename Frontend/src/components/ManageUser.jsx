@@ -6,15 +6,15 @@ const ManageUser = () => {
 
   const [userArray, setUserArray] = useState([]);
 
-    const getUserData = async () => {
+  const getUserData = async () => {
 
-        const res = await fetch ('http://localhost:5000/user/getall');
+      const res = await fetch ('http://localhost:5000/user/getall');
         console.log(res.status);
 
-        const data = await res.json();
+      const data = await res.json();
         console.table(data);
 
-        setUserArray(data);
+      setUserArray(data);
 
     }
 
